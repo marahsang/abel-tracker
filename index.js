@@ -13,5 +13,5 @@ const ulEl = document.getElementById("ul-el")
 
     for (i = 0; i < myLeads.length; i++) {
         console.log(myLeads)
-        ulEl.textContent += myLeads[i] + " "        
+        ulEl.innerHTML += "<li>" + myLeads[i] + "</li>"        
     }
