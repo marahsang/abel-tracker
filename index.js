@@ -1,4 +1,4 @@
-let myLeads = []
+let myLeads = ["www.awesomelead.com", "www.epiclead.com", "www.greatlead.com"]
 const inputEl = document.getElementById("input-el")
 function saveLead() {
     console.log("button clicked")
@@ -10,3 +10,8 @@ const ulEl = document.getElementById("ul-el")
         myLeads.push(inputEl.value)
         console.log(myLeads)
     })
+
+    for (i = 0; i < myLeads.length; i++) {
+        console.log(myLeads)
+        ulEl.textContent += myLeads[i] + " "        
+    }
