@@ -4,7 +4,9 @@ function saveLead() {
     console.log("button clicked")
 }
 
-let inputBtn = document.getElementById("input-btn")
-inputBtn.addEventListener("click", function saveLead() {
-    console.log("button clicked")
-})
+const inputBtn = document.getElementById("input-btn")
+const ulEl = document.getElementById("ul-el")
+    inputBtn.addEventListener("click", function saveLead() {
+        myLeads.push("www.awesomelead.com")
+        console.log(myLeads)
+    })
