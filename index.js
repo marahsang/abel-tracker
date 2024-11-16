@@ -7,6 +7,6 @@ function saveLead() {
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
     inputBtn.addEventListener("click", function saveLead() {
-        myLeads.push("www.awesomelead.com")
+        myLeads.push(inputEl.value)
         console.log(myLeads)
     })
