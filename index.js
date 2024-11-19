@@ -13,5 +13,11 @@ const ulEl = document.getElementById("ul-el")
 
     for (i = 0; i < myLeads.length; i++) {
         console.log(myLeads)
-        ulEl.innerHTML += "<li>" + myLeads[i] + "</li>"        
+      //  ulEl.innerHTML += "<li>" + myLeads[i] + "</li>"        
+      //const li = document.createElement("li")
+      //li.textContent = myLeads[i]
+      //ulEl.append(li)
+      let listItems = ""
+      listItems += "<li>" + myLeads[i] + "</li>"
+      ulEl.innerHTML += listItems
     }
