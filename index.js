@@ -17,7 +17,7 @@ const ulEl = document.getElementById("ul-el")
         let listItems = ""
         for (i = 0; i < myLeads.length; i++) {
             console.log(myLeads)
-         listItems += `
+          listItems += `
             <li>  
                 <a href="${myLeads[i]}" target= "_blank">
                     ${myLeads[i]}
