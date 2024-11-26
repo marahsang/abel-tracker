@@ -1,11 +1,13 @@
 let myLeads = []
 const inputEl = document.getElementById("input-el")
+const inputBtn = document.getElementById("input-btn")
+const ulEl = document.getElementById("ul-el")
+
+localStorage.clear()
+console.log(localStorage.getItem("urLeads"))
 function saveLead() {
     console.log("button clicked")
 }
-
-const inputBtn = document.getElementById("input-btn")
-const ulEl = document.getElementById("ul-el")
     inputBtn.addEventListener("click", function saveLead() {
         myLeads.push(inputEl.value)
         console.log(myLeads)
@@ -19,7 +21,7 @@ const ulEl = document.getElementById("ul-el")
             console.log(myLeads)
           listItems += `
             <li>  
-                <a href="${myLeads[i]}" target= "_blank">
+                <a href="${myLeads[i]}" target="_blank">
                     ${myLeads[i]}
                 </a> 
             </li>
