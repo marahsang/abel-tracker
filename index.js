@@ -13,11 +13,6 @@ if (leadsFromLocalStorage) {
     render(myLeads)
 }
 
-const tabs = [
-    {url: "https://ww.linnkedin.com/in/abel-ebenezer-sangmortey/"}
-]
-
-
 function render(leads) {
     let listItems = ""
     for (i = 0; i < leads.length; i++) {
@@ -31,7 +26,6 @@ function render(leads) {
         }               
 ulEl.innerHTML = listItems
 }
-
 
 deleteBtn.addEventListener("dblclick", function (){
     console.log("double click")
@@ -50,13 +44,9 @@ deleteBtn.addEventListener("dblclick", function (){
     })
 
     tabBtn.addEventListener("click", function() {
-        chrome.tabs.query({active: true, currenWindow: true}, function(tabs) {
+        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
             myLeads.push(tabs[0].url)
-            localStorage.setItem("myleads", JSON.stringify("myLeads"))
+            localStorage.setItem("myleads", JSON.stringify(myLeads))
             render(myLeads)
         })
-        console.log(tabs[0].url)
-        myLeads.push(tabs[0].url)
-        localStorage.setItem("myleads", JSON.stringify(myLeads))
-        render(myLeads)
     })
