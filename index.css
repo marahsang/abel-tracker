@@ -14,13 +14,22 @@ input {
 
 button {
     padding: 10px;
-    color: white;
     font-weight: bold;
     font-size: 12px;
     margin-top: 5px;
-    background: #5f9341;
     width: 100px;
-    border: #5f9341;
+}
+
+  .hot {
+    background: #5f9341;
+    color: #fff;
+    border: 1px solid #5f9341;
+}
+
+.cool {
+    background: #fff;
+    color: #5f9341;
+    border: 1px solid #5f9341;
 }
 
 ul {
