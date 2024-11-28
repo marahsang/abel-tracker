@@ -1,12 +1,16 @@
 let myLeads = []
-let olLeads = []
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn");
+const tabBtn = document.getElementById("tab-btn");
+
 
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
-console.log(leadsFromLocalStorage)
+const tabs = [
+    {url: "https://ww.linnkedin.com/in/abel-ebenezer-sangmortey/"}
+]
+
 
 if (leadsFromLocalStorage) {
      myLeads = leadsFromLocalStorage 
@@ -17,7 +21,6 @@ if (leadsFromLocalStorage) {
 function render(leads) {
     let listItems = ""
     for (i = 0; i < leads.length; i++) {
-        console.log(leads)
       listItems += `
         <li>  
             <a href="${leads[i]}" target="_blank">
@@ -46,8 +49,6 @@ deleteBtn.addEventListener("dblclick", function (){
         render(myLeads)
     })
 
-    function getFirst(arr) {
-       return arr[0]
-    }
-    let numbers = [1, 2, 3, 4]
-    console.log(getFirst(numbers))
+    tabBtn.addEventListener("click", function() {
+        console.log(tabs.url)
+    })
