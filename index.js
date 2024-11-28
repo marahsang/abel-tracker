@@ -7,15 +7,15 @@ const tabBtn = document.getElementById("tab-btn");
 
 
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
-const tabs = [
-    {url: "https://ww.linnkedin.com/in/abel-ebenezer-sangmortey/"}
-]
-
 
 if (leadsFromLocalStorage) {
      myLeads = leadsFromLocalStorage 
     render(myLeads)
 }
+
+const tabs = [
+    {url: "https://ww.linnkedin.com/in/abel-ebenezer-sangmortey/"}
+]
 
 
 function render(leads) {
@@ -50,5 +50,5 @@ deleteBtn.addEventListener("dblclick", function (){
     })
 
     tabBtn.addEventListener("click", function() {
-        console.log(tabs.url)
+        console.log(tabs[0].url)
     })
