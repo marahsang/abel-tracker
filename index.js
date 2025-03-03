@@ -10,7 +10,6 @@ if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage;
     render(myLeads);
 }
-
 function render(leads) {
     ulEl.innerHTML = leads
         .map(
